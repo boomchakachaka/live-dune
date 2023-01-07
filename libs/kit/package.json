@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "@libs/kit",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel ./src --out-dir ./lib --copy-files",
+    "start:dev": "cross-env NODE_ENV=development babel ./src --out-dir ./lib --copy-files --watch"
+  },
+  "peerDependencies": {
+    "clsx": "1.2.1",
+    "react": "18.2.0",
+    "react-router-dom": "6.6.1",
+    "redux-form": "8.3.8",
+    "prop-types": "15.8.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.20.7",
+    "@babel/core": "7.20.7",
+    "cross-env": "7.0.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  }
+}

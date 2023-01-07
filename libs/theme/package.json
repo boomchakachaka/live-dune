@@ -1,0 +1,10 @@
+{
+  "name": "@libs/theme",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "./src/default.scss",
+  "author": {
+    "name": "Dmitriy Shten",
+    "email": "easyBreazy@tutanota.com"
+  }
+}

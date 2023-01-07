@@ -1,0 +1,34 @@
+
+@import '~@libs/theme';
+
+
+.wrapper {
+
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.container {
+
+  display: block;
+}
+
+.error {
+
+  display: flex;
+  justify-content: center;
+  flex: 1 0;
+  align-items: center;
+  text-align: center;
+  padding: 3px 0 0;
+}
+
+.message {
+
+  color: $danger;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: $f-regular;
+  white-space: nowrap;
+}

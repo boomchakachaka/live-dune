@@ -1,0 +1,73 @@
+
+@import '~@libs/theme';
+
+
+.wrapper {
+
+  display: block;
+  padding: 50px 0 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 32px;
+}
+
+.description {
+
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+.content {
+
+}
+
+.image {
+
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: url(./icons/img-lock.svg) no-repeat center;
+  margin-bottom: 48px;
+}
+
+.controls {
+
+  display: block;
+  text-align: center;
+  margin: 32px 0 0;
+
+  button {
+
+    width: 100%;
+    margin: 0 0 24px;
+  }
+}
+
+.footer {
+
+  display: block;
+  text-align: center;
+  margin: 62px 0 0;
+  padding: 17px 0;
+  border-radius: 0 0 20px 20px;
+}
+
+.back {
+
+  display: inline-block;
+  font-weight: $f-bold;
+  font-size: 14px;
+  color: $grey;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+

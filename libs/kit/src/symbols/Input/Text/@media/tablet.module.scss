@@ -1,0 +1,30 @@
+
+@import "~@libs/theme";
+
+
+.wrapper {
+
+  position: relative;
+  display: block;
+  border: 1px solid transparent;
+  background: $grey;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.input {
+
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: $f-semi-bold;
+  color: $black;
+  z-index: 2;
+}

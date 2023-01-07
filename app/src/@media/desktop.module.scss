@@ -1,0 +1,20 @@
+
+@import '~@libs/theme';
+
+
+body {
+
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: inherit;
+  padding: 0 54px 16px;
+  box-sizing: border-box;
+}
