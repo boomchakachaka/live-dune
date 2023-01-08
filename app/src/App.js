@@ -2,7 +2,7 @@
 import { Header } from '@libs/design';
 
 import React from 'react';
-import {Route, Routes, Navigate, Link} from 'react-router-dom';
+import { Route, Routes, Navigate, Link } from 'react-router-dom';
 
 import SignInPage from '@modules/sign-in';
 import SignUpPage from '@modules/sign-up';
@@ -15,10 +15,10 @@ function App() {
   return (
     <div className={styles['wrapper']}>
       <header className={styles['header']}><Header /></header>
-      <Link  to={'/sign-in'}>RYJGRFERE</Link>
+      <Link to={'/sign-in'}>RYJGRFERE</Link>
       <div className={styles['content']}>
         <Routes>
-          <Route path={'/'} element={<Navigate replace to={'/sign-in'} />} />
+          <Route path={'*'} element={<Navigate replace to={'/sign-in'} />} />
           <Route path={'/sign-in'} element={<SignInPage />} />
           <Route path={'/sign-up'} element={<SignUpPage />}/>
           <Route path={'/reset-password'} element={<ResetPasswordPage />} />
