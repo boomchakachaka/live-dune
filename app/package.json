@@ -2,7 +2,6 @@
   "name": "live-dune",
   "version": "0.0.1",
   "private": false,
-  "homepage": "https://boomchakachaka.github.io/live-dune",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
