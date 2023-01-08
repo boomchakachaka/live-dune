@@ -37,7 +37,7 @@ function ResetPasswordForm({ handleSubmit, valid, submitting }) {
           inProcess={inProcess}
           disabled={ ! valid || submitting}
         >Отправить</Button>
-        <Link className={styles['back']} to={'/live-dune/sign-in'}>Отменить</Link>
+        <Link className={styles['back']} to={process.env['PUBLIC_URL'] + '/sign-in'}>Отменить</Link>
       </div>
     </form>
   );
