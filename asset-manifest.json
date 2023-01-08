@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/live-dune/static/css/main.6edcc52c.css",
+    "main.js": "/live-dune/static/js/main.52bddf9b.js",
+    "static/media/logotype.svg": "/live-dune/static/media/logotype.fb08081847d1f265dda1.svg",
+    "static/media/icon-fb.svg": "/live-dune/static/media/icon-fb.305eba30b56dd8418f59.svg",
+    "static/media/icon-google.svg": "/live-dune/static/media/icon-google.1011a862388e7bf4efac.svg",
+    "index.html": "/live-dune/index.html",
+    "static/media/img-lock.svg": "/live-dune/static/media/img-lock.525cd4fc8210a0f0a7b8.svg",
+    "main.6edcc52c.css.map": "/live-dune/static/css/main.6edcc52c.css.map",
+    "main.52bddf9b.js.map": "/live-dune/static/js/main.52bddf9b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6edcc52c.css",
+    "static/js/main.52bddf9b.js"
+  ]
+}
