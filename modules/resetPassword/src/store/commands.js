@@ -6,17 +6,13 @@ import {
 } from './slice';
 
 
-export const resetPassword = (dataFrom) => async (dispatch) => {
+export const resetPassword = () => async (dispatch) => {
   try {
     dispatch(resetPasswordRequestAction());
 
-    const result = await fetch({
-      url: '/reset/password',
-      method: 'post',
-      data: dataFrom,
-    });
-
-    dispatch(resetPasswordRequestSuccessAction(result));
+    setTimeout(async () => {
+      dispatch(resetPasswordRequestSuccessAction());
+    }, 1000)
   }
   catch (error) {
     dispatch(resetPasswordRequestFailAction(error['data']));

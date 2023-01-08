@@ -1,8 +1,10 @@
 
+import { selectInProcess } from '@modules/sign-up';
 import { InputField, Button, Header, Text } from '@libs/kit';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import cn from 'clsx';
@@ -10,10 +12,18 @@ import styles from './default.module.scss';
 
 
 function SignUpForm({ handleSubmit, valid }) {
+  const navigate = useNavigate();
+  const inProcess = useSelector(selectInProcess);
   const [isActive, setActive] = React.useState(false);
 
   function handleShowField() {
     setActive( ! isActive);
+  }
+
+  function handleRedirect() {
+    setTimeout(() => {
+      navigate('/confirm-email');
+    }, 1000);
   }
 
   return (
@@ -63,6 +73,8 @@ function SignUpForm({ handleSubmit, valid }) {
             type={'submit'}
             mode={'primary'}
             disabled={ ! valid }
+            inProcess={inProcess}
+            onClick={() => handleRedirect()}
           >Создать аккаунт</Button>
           <span className={styles['offer']}>Создавая аккаунт, я согласен с <p className={styles['link']}>условиями оферты</p></span>
         </div>

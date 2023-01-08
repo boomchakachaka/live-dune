@@ -11,6 +11,10 @@
   margin: 0 auto;
 }
 
+.form {
+  width: 100%;
+}
+
 .header {
 
   display: flex;
@@ -35,6 +39,7 @@
     border-radius: 12px;
     padding: 18px 15px 18px 56px;
     cursor: pointer;
+    box-sizing: border-box;
     transition: opacity 1.5s;
 
     & + & {

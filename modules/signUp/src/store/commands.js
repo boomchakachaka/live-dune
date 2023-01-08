@@ -10,15 +10,10 @@ export const signUp = ({...formData }) => async (dispatch) => {
   try {
     dispatch(signUpRequestAction());
 
-    await fetch({
-      url: '/sign-up',
-      method: 'post',
-      data: {
-        ...formData,
-      },
-    });
+    setTimeout(async () => {
+      await dispatch(signUpRequestSuccessAction());
+    }, 1000);
 
-    await dispatch(signUpRequestSuccessAction());
   }
   catch(error) {
     switch (error['code']) {

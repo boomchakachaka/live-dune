@@ -27,6 +27,18 @@
 
 .content {
 
+  width: 100%;
+}
+
+.text {
+
+  display: block;
+  font-size: 16px;
+  font-weight: $f-semi-bold;
+  line-height: 1;
+  color: $success;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .image {

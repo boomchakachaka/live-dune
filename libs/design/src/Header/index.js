@@ -1,20 +1,28 @@
 
-import { Button, Logotype, Text } from '@libs/kit';
+import { Logotype} from '@libs/kit';
 
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
+import SignInControl from './signInControl';
+import SignUpControl from './signUpControl';
+import ConfirmEmailControl from './confirmEmailControl';
 
 import styles from './default.module.scss';
 
 
-function Header() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const curr = location['pathname'].split('/')[1];
-
-  function handleChangeRoute() {
-    navigate(`/sign-in`);
+function FactoryControls({ url }) {
+  switch (url) {
+    case 'sign-in': return <SignInControl />;
+    case 'sign-up': return <SignUpControl />;
+    case 'confirm-email': return <ConfirmEmailControl />;
+    default: return <div className={styles['right']} />;
   }
+}
+
+function Header() {
+  const location = useLocation();
+  const url = location['pathname'].split('/')[1];
 
   return (
     <div className={styles['wrapper']}>
@@ -22,12 +30,7 @@ function Header() {
         <div className={styles['left']}>
           <Logotype />
         </div>
-        <div className={styles['right']}>
-          <span className={styles['text']}><Text>У вас нет аккаунта?</Text></span>
-          <div className={styles['control']}>
-            <Button size={'small'} onClick={handleChangeRoute}>Войти</Button>
-          </div>
-        </div>
+      { <FactoryControls url={url} /> }
       </div>
     </div>
   );

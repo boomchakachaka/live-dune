@@ -2,10 +2,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 
-const REDUCER_NAME = 'modules/sign-up';
+const REDUCER_NAME = 'sign-up';
 
 const initialState = {
-  error: null,
   inProcess: false,
 };
 
@@ -15,25 +14,17 @@ const slice = createSlice({
   initialState,
   reducers: {
     resetStateAction(state) {
-      state['error'] = null;
       state['inProcess'] = false;
-    },
-
-    resetErrorAction(state) {
-      state['error'] = null;
     },
 
     signUpRequestAction(state) {
       state['inProcess'] = true;
-      state['error'] = null;
     },
-    signUpRequestFailAction(state, { payload }) {
+    signUpRequestFailAction(state) {
       state['inProcess'] = false;
-      state['error'] = payload;
     },
     signUpRequestSuccessAction(state) {
       state['inProcess'] = false;
-      state['error'] = null;
     },
   },
 });
@@ -41,14 +32,11 @@ const slice = createSlice({
 export const {
   resetStateAction,
 
-  resetErrorAction,
-
   signUpRequestAction,
   signUpRequestFailAction,
   signUpRequestSuccessAction,
 } = slice['actions'];
 
-export const selectError = (state) => state[REDUCER_NAME]['error'];
 export const selectInProcess = (state) => state[REDUCER_NAME]['inProcess'];
 
 export const name = slice['name'];

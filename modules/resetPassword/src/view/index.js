@@ -1,4 +1,6 @@
 
+import { resetStateAction } from '@modules/reset-password';
+
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -9,7 +11,13 @@ function HOC() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    document.title = `LiveDune | Смена пароля`;
+    document.title = `LiveDune | Восстановление пароля`;
+  }, []);
+
+  React.useEffect(() => {
+    return () => {
+      dispatch(resetStateAction())
+    }
   }, []);
 
   return <Component />;

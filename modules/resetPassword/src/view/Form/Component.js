@@ -1,5 +1,5 @@
 
-// import { selectInProcess } from '@modules/reset-password';
+import { selectInProcess, selectIsSuccess } from '@modules/reset-password';
 
 import { Button, InputField, Header, Text } from '@libs/kit';
 
@@ -11,7 +11,8 @@ import styles from './default.module.scss';
 
 
 function ResetPasswordForm({ handleSubmit, valid, submitting }) {
-  // const inProcess = useSelector(selectInProcess);
+  const inProcess = useSelector(selectInProcess);
+  const isSuccess = useSelector(selectIsSuccess);
 
   return (
     <form className={styles['wrapper']} onSubmit={handleSubmit}>
@@ -23,6 +24,7 @@ function ResetPasswordForm({ handleSubmit, valid, submitting }) {
         </span>
       </span>
       <div className={styles['content']}>
+        { isSuccess && <span className={styles['text']}>Успех</span> }
         <InputField
           placeholder={'E-mail'}
           name={'email'}
@@ -32,7 +34,7 @@ function ResetPasswordForm({ handleSubmit, valid, submitting }) {
         <Button
           type={'submit'}
           mode={'primary'}
-          // inProcess={true}
+          inProcess={inProcess}
           disabled={ ! valid || submitting}
         >Отправить</Button>
         <Link className={styles['back']} to={'/sign-in'}>Отменить</Link>

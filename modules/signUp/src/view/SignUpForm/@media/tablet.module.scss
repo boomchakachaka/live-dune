@@ -1,0 +1,33 @@
+
+@import '~@libs/theme';
+
+
+.wrapper {
+
+  margin: 40px auto 10px;
+  max-width: 343px;
+}
+
+.social {
+
+  flex-direction: column;
+  margin: 24px 0 0;
+
+  &__link {
+
+    width: 100%;
+
+    & + & {
+
+      margin: 9px 0 0;
+    }
+  }
+}
+
+.text {
+  padding: 10px 0;
+}
+
+.offer {
+  max-width: 250px;
+}

@@ -8,7 +8,6 @@ import Middle from './Middle';
 
 const SIZE_SMALL = 'small';
 const SIZE_MIDDLE = 'middle';
-const SIZE_LARGE = 'large';
 
 
 function Factory({ size, ...rest }) {
@@ -19,7 +18,7 @@ function Factory({ size, ...rest }) {
 }
 
 Factory.propTypes = {
-  size: types.oneOf([SIZE_SMALL, SIZE_MIDDLE, SIZE_LARGE]),
+  size: types.oneOf([SIZE_SMALL, SIZE_MIDDLE]),
 };
 
 Factory.defaultProps = {

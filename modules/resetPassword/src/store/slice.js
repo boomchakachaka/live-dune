@@ -2,13 +2,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 
-const REDUCER_NAME = 'modules/reset-password';
+const REDUCER_NAME = 'reset-password';
 
 const initialState = {
-  isError: false,
   inProcess: false,
   isSuccess: false,
-  error: null,
 };
 
 
@@ -17,17 +15,14 @@ const slice = createSlice({
   initialState,
   reducers: {
     resetStateAction(state) {
-      state['isError'] = false;
       state['inProcess'] = false;
       state['isSuccess'] = false;
-      state['error'] = null;
     },
 
     resetPasswordRequestAction(state) {
       state['inProcess'] = true;
     },
     resetPasswordRequestFailAction(state) {
-      state['isError'] = true;
       state['inProcess'] = false;
     },
     resetPasswordRequestSuccessAction(state) {
@@ -45,7 +40,6 @@ export const {
   resetPasswordRequestSuccessAction,
 } = slice['actions'];
 
-export const selectIsError = (state) => state[REDUCER_NAME]['isError'];
 export const selectIsSuccess = (state) => state[REDUCER_NAME]['isSuccess'];
 export const selectInProcess = (state) => state[REDUCER_NAME]['inProcess'];
 

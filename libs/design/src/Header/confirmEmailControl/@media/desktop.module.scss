@@ -1,0 +1,17 @@
+
+@import '~@libs/theme';
+
+
+.right {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.control {
+
+  margin-left: 24px;
+  cursor: pointer;
+}

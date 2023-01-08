@@ -5,9 +5,6 @@ export { name, reducer } from './store/slice';
 export {
   resetStateAction,
 
-  resetErrorAction,
-
-  selectError,
   selectInProcess,
 } from './store/slice';
 
