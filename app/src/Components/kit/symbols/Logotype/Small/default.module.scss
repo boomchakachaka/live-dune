@@ -1,0 +1,17 @@
+
+@import '~@libs/theme';
+
+
+.wrapper {
+
+  position: relative;
+  display: inline-block;
+}
+
+.logotype {
+
+  display: inline-block;
+  width: 114px;
+  height: 16px;
+  background: url('icons/logotype.svg') center/100% no-repeat;
+}

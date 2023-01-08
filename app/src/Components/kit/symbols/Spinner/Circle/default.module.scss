@@ -1,0 +1,40 @@
+
+@import '~@libs/theme';
+
+
+.wrapper {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0;
+}
+
+.spinner {
+
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  &:after {
+
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: rgba($white, .5) transparent rgba($white, .5) transparent;
+    animation: anim 1.2s linear infinite;
+  }
+}
+
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

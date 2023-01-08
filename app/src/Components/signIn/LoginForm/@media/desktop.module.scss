@@ -1,0 +1,128 @@
+
+@import 'src/theme/default.scss';
+
+
+.wrapper {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 30px auto 0;
+}
+
+.form {
+  width: 100%;
+}
+
+.header {
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.social {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0 12px;
+
+  &__link {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $grey-light;
+    border-radius: 12px;
+    padding: 18px 15px 18px 56px;
+    font-weight: $f-semi-bold;
+    cursor: pointer;
+    transition: opacity 1.5s;
+    background-color: transparent;
+    box-sizing: border-box;
+
+    & + & {
+      margin-left: 16px;
+    }
+
+    &.fb {
+      background: url(./icons/icon-fb.svg) no-repeat 20px;
+    }
+
+    &.google {
+      background: url(./icons/icon-google.svg) no-repeat 20px;
+    }
+
+    &:hover {
+      background-color: $ghost-white;
+    }
+  }
+}
+
+.text {
+
+  display: block;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.content {
+
+  display: block;
+}
+
+.row {
+
+  display: block;
+
+  & + & {
+
+    margin: 16px 0 0;
+  }
+}
+
+.controls {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0 0;
+
+  button {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+}
+
+.link {
+
+  display: inline;
+  font-size: 14px;
+  font-weight: $f-semi-bold;
+  line-height: 24px;
+  color: $primary;
+  transition: opacity .15s;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.offer {
+
+  display: inline;
+  width: 100%;
+  text-align: center;
+}
+
+.description {
+
+  display: block;
+  text-align: center;
+  margin: 16px 0 0;
+}

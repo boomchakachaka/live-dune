@@ -10,12 +10,6 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "@modules/sign-in": "0.0.1",
-    "@modules/sign-up": "0.0.1",
-    "@modules/reset-password": "0.0.1",
-    "@modules/confirm-email": "0.0.1",
-    "@libs/design": "0.0.1",
-    "@libs/kit": "0.0.1",
     "clsx": "1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
