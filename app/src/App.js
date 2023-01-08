@@ -17,11 +17,11 @@ function App() {
       <header className={styles['header']}><Header /></header>
       <div className={styles['content']}>
         <Routes>
-          <Route path={'/live-dune'} element={<Navigate replace to={'/live-dune/sign-in'} />} />
           <Route path={'/live-dune/sign-in'} element={<SignInPage />} />
           <Route path={'/live-dune/sign-up'} element={<SignUpPage />}/>
           <Route path={'/live-dune/reset-password'} element={<ResetPasswordPage />} />
           <Route path={'/live-dune/confirm-email'} element={<ConfirmEmailPage />} />
+          <Route path={'/'} element={<Navigate replace to={'/live-dune/sign-in'} />} />
         </Routes>
       </div>
     </div>
