@@ -1,5 +1,5 @@
 
-import { Spinner } from '@libs/kit';
+import { Spinner } from '../../../../kit';
 
 import React, { useMemo } from 'react';
 

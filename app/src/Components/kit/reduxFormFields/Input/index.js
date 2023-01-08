@@ -1,5 +1,5 @@
 
-import { Input } from '@libs/kit';
+import { Input } from '../../../kit';
 
 import React from 'react';
 import types from 'prop-types';

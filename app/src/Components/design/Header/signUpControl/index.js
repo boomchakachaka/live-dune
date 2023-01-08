@@ -1,5 +1,5 @@
 
-import { Button, Text } from '@libs/kit';
+import { Button, Text } from '../../../kit';
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
