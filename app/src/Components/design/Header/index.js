@@ -1,5 +1,5 @@
 
-import { Logotype} from '@libs/kit';
+import { Logotype} from '../../kit';
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
