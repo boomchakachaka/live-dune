@@ -1,18 +1,13 @@
 
-import { selectInProcess } from '@modules/confirm-email';
-
 import { Button, Header, Text } from '@libs/kit';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 import styles from './default.module.scss';
 
 
 function ConfirmEmailForm({ handleSubmit, valid, submitting }) {
-  // const inProcess = useSelector(selectInProcess);
-
   return (
     <form className={styles['wrapper']} onSubmit={handleSubmit}>
       <div className={styles['header']}>
@@ -25,10 +20,9 @@ function ConfirmEmailForm({ handleSubmit, valid, submitting }) {
         <Button
           type='submit'
           mode='primary'
-          // inProcess={inProcess}
           disabled={ ! valid || submitting}
         >Перейти к почте </Button>
-        <Link className={styles['link']} to={'/sign-up'}>Мне не пришло письмо</Link>
+        <Link className={styles['link']} to={process.env['PUBLIC_URL'] + '/sign-up'}>Мне не пришло письмо</Link>
       </div>
     </form>
   );

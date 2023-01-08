@@ -13,7 +13,7 @@ export default function ConfirmEmailControl() {
   return (
     <div className={styles['right']}>
       <div className={styles['control']}>
-        <Text type={'description'} onClick={() => navigate('/sign-up')}>Выйти</Text>
+        <Text type={'description'} onClick={() => navigate(process.env['PUBLIC_URL'] + '/sign-up')}>Выйти</Text>
       </div>
     </div>
   )
