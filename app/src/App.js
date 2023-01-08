@@ -17,11 +17,11 @@ function App() {
       <header className={styles['header']}><Header /></header>
       <div className={styles['content']}>
         <Routes>
-          <Route path={'/'} element={<Navigate replace to={process.env['PUBLIC_URL'] + '/sign-in'} />} />
-          <Route path={'/sign-in'} element={<SignInPage />} />
-          <Route path={'/sign-up'} element={<SignUpPage />}/>
-          <Route path={'/reset-password'} element={<ResetPasswordPage />} />
-          <Route path={'/confirm-email'} element={<ConfirmEmailPage />} />
+          <Route path={process.env['PUBLIC_URL']} element={<Navigate replace to={process.env['PUBLIC_URL'] + '/sign-in'} />} />
+          <Route path={process.env['PUBLIC_URL'] + '/sign-in'} element={<SignInPage />} />
+          <Route path={process.env['PUBLIC_URL'] + '/sign-up'} element={<SignUpPage />}/>
+          <Route path={process.env['PUBLIC_URL'] + '/reset-password'} element={<ResetPasswordPage />} />
+          <Route path={process.env['PUBLIC_URL'] + '/confirm-email'} element={<ConfirmEmailPage />} />
         </Routes>
       </div>
     </div>

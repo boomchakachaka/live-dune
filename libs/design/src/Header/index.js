@@ -22,7 +22,7 @@ function FactoryControls({ url }) {
 
 function Header() {
   const location = useLocation();
-  const url = location['pathname'].split('/')[1];
+  const url = location['pathname'].split('/')[2];
 
   return (
     <div className={styles['wrapper']}>
