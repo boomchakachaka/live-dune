@@ -1,8 +1,8 @@
 
 # dependencies
-/node_modules
-/build
-/lib
+node_modules
+build
+lib
 
 # misc
 .env.local
