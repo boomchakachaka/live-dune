@@ -22,7 +22,7 @@ function ConfirmEmailForm({ handleSubmit, valid, submitting }) {
           mode='primary'
           disabled={ ! valid || submitting}
         >Перейти к почте </Button>
-        <Link className={styles['link']} to={process.env['PUBLIC_URL'] + '/sign-up'}>Мне не пришло письмо</Link>
+        <Link className={styles['link']} to={'/live-dune/sign-up'}>Мне не пришло письмо</Link>
       </div>
     </form>
   );
