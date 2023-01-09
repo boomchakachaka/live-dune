@@ -1,12 +1,21 @@
 {
   "name": "live-dune",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
+  "homepage": "https://boomchakachaka.github.io/live-dune",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@modules/sign-in": "0.0.1",
+    "@modules/sign-up": "0.0.1",
+    "@modules/confirm-email": "0.0.1",
+    "@modules/reset-password": "0.0.1",
+    "@libs/kit": "0.0.1",
+    "@libs/design": "0.0.1",
     "clsx": "1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",

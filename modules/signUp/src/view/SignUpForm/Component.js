@@ -22,7 +22,7 @@ function SignUpForm({ handleSubmit, valid }) {
 
   function handleRedirect() {
     setTimeout(() => {
-      navigate(process.env['PUBLIC_URL'] + '/confirm-email');
+      navigate('/confirm-email');
     }, 1000);
   }
 

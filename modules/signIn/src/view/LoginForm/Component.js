@@ -43,7 +43,7 @@ function SignInForm({ handleSubmit, valid }) {
             mode={'primary'}
             disabled={ ! valid }
           >Войти в аккаунт</Button>
-          <Link to={process.env['PUBLIC_URL'] + '/reset-password'} className={styles['link']}>Забыли пароль?</Link>
+          <Link to={'/reset-password'} className={styles['link']}>Забыли пароль?</Link>
         </div>
       </form>
     </div>

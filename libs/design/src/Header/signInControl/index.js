@@ -14,7 +14,7 @@ export default function SignInControl() {
     <div className={styles['right']}>
       <span className={styles['text']}><Text>У вас нет аккаунта?</Text></span>
       <div className={styles['control']}>
-        <Button size={'small'} onClick={() => navigate(process.env['PUBLIC_URL'] + '/sign-up')}>Регистрация</Button>
+        <Button size={'small'} onClick={() => navigate('/sign-up')}>Регистрация</Button>
       </div>
     </div>
   )

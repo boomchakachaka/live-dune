@@ -1,8 +1,0 @@
-
-@import 'src/theme/default.scss';
-
-@import '@media/desktop.module';
-
-@media (max-width: $mobile) {
-  @import '@media/tablet.module';
-}
